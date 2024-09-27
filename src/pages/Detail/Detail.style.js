@@ -5,6 +5,7 @@ const Device = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
+        zIndex:1
     },
     header_container: {
         width: '100%',
@@ -31,6 +32,7 @@ export default StyleSheet.create({
         borderRadius:20,
         borderColor:'white',
         borderWidth:0,
+        zIndex:2
     },
     type_single:{
         marginHorizontal: 10,
@@ -46,6 +48,7 @@ export default StyleSheet.create({
         borderRadius:20,
         borderColor:'white',
         borderWidth:0,
+        zIndex:2
     },
     type_name: {
         color: 'white',
@@ -53,12 +56,13 @@ export default StyleSheet.create({
         fontWeight:'bold',
     },
     image: {
-        width: 250,
-        height: 250,
+        width: 300,
+        height: 300,
         resizeMode: 'cover',
         position: 'absolute',
-        bottom: -30, // Alt kısma sabitlemek için
-        alignSelf: 'center', // Görüntünün merkezde olmasını sağlar,
+        bottom: -30, 
+        alignSelf: 'center',
+        zIndex:1,
     },
     title: {
         fontSize: 40,
@@ -73,7 +77,7 @@ export default StyleSheet.create({
         color: 'white',
         fontWeight:'500'
     },
-    instructions_container: {
+    stats_container: {
         marginTop:30,
         flex: 1,
         margin: 10,
@@ -129,7 +133,7 @@ export default StyleSheet.create({
     weight:{
         flexDirection:'row',
         margin:10,
-        alignItems:'center'
+        alignItems:'center',
     },
     abilities:{
         flexDirection:'row',
@@ -150,4 +154,17 @@ export default StyleSheet.create({
         fontWeight:'bold',
         margin:5
     },
+    backgroundImage: {
+        width: 400,
+        height: 400,
+        alignItems: 'center',
+        justifyContent: 'center',
+        resizeMode: 'cover',
+        position:'absolute',
+        top:5,
+        left:60
+      },
+      imageStyle: {
+        opacity: 0.20, // Pokeball'ı arkaplan olarak eklediğinizde opacity ayarı yapabilirsiniz
+      },
 })
